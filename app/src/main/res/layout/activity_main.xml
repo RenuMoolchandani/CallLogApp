@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Input field for API URL -->
+    <EditText
+        android:id="@+id/apiUrlInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter API URL"
+        android:inputType="textUri"
+        android:padding="12dp"
+        android:background="@android:color/white"/>
+
+    <!-- Save API URL Button -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save API URL"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@android:color/holo_blue_light" />
+
+    <!-- Load Call Logs Button -->
+    <Button
+        android:id="@+id/loadLogsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Call Logs"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@android:color/holo_green_light" />
+
+    <!-- Search Call Logs -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:queryHint="Search by contact name" />
+
+    <!-- Call Logs ListView -->
+    <ListView
+        android:id="@+id/callLogListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:listSelector="@android:color/transparent" />
+
+</LinearLayout>
